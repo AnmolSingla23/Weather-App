@@ -1,0 +1,268 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather Sans", sans-serif;
+}
+
+:root {
+    --colorDark1: #112d4e;
+    --colorDark2: #3f72af;
+    --colorLight1: #dbe2ef;
+    --colorLight2: #f9f7f7;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    color: #dbe2ef;
+    background: linear-gradient(90deg, rgba(222, 245, 255, 1) 0%, rgba(61, 186, 200, 1) 94%);
+}
+
+h1{
+    text-align: center;
+    padding-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.tab-container{
+    padding-top: 50px;
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.tab{
+    font-size: 1.1rem;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+}
+
+
+
+.weather-container{
+    /* display: flex;
+    flex-direction: column;
+    margin-block: 4rem;
+    justify-content: center;
+    align-items: center; */
+    margin-block: 4rem;
+    
+}
+
+.btn{
+    all: unset;
+    text-transform: uppercase;
+    color: #f9f7f7;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: var(--colorDark2);
+    cursor: pointer;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+    letter-spacing: .5px;
+}
+
+.sub-container{
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grant-location-container{
+    display: none;
+}
+
+
+.grant-location-container img{
+    margin-bottom: 1.5rem;
+}
+
+.grant-location-container p:nth-child(1){
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+.grant-location-container p:last-of-type{
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    letter-spacing: .75px;
+}
+
+.grant-location-container.active{
+    display: flex;
+}
+
+.loading-container{
+    display: none;
+}
+
+.loading-container.active{
+    display: flex;
+}
+
+.loading-container p{
+    text-transform: uppercase;
+    
+}
+
+.user-info-container{
+    display: none;
+}
+
+.user-info-container.active{
+    display: flex;
+}
+
+.user-info-container p{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.user-info-container img{
+    width: 90px;
+    height: 90px;
+}
+
+.name{
+    display: flex;
+    align-items: center;
+    gap: 0 0.7rem;
+    margin-bottom: 1rem;
+}
+
+.name p{
+    font-size: 2rem;
+}
+
+.name img{
+    width: 30px;
+    height: 30px;
+}
+
+.user-info-container p[data-temp]{
+    font-size: 2.75rem;
+    font-weight: 750;
+}
+
+.parameter-container{
+    display: flex;
+    gap: 10px 20px;
+    justify-content: center;
+    margin-top: 2rem;
+    align-items: center;
+    width: 90%;
+}
+
+.parameter{
+    width: 23%;
+    max-width: 300px;
+    background-color: slategray;
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px 0;
+    align-items: center;
+}
+
+.parameter img{
+    width: 50px;
+    height: 50px;
+}
+
+.parameter p:first-of-type{
+    text-transform: uppercase;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.parameter p:last-of-type{
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.form-container{
+    display: none;
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+    margin-bottom: 3rem;
+}
+
+.form-container.active{
+    display: flex;
+}
+
+.form-container input{
+    all:unset;
+    opacity: 60%;
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+    background-color: silver;
+    border-radius: 10px;
+}
+
+.form-container input::placeholder{
+    color: #f9f7f7;
+}
+
+.form-container input:focus{
+    outline: 3px solid #dbe2ef;
+}
+
+.form-container .btn{
+    padding: unset;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin-bottom: 1px;
+}
+
+.errorContainer {
+    display: none;
+}
+
+.errorContainer.active {
+    display: flex;
+    gap: 1rem 0;
+}
+
+.errorContainer p {
+    text-align: center;
+}
+
+.errorContainer img {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+
+.tab.current-tab{
+    background-color: gray;
+    opacity: 50%;
+    border-radius: 4px;
+}
+
+.form-container.active{
+    scale: 1;
+}
